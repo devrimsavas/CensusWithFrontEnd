@@ -1,0 +1,53 @@
+[
+  {
+    "email": "example@example.com",
+    "personalInfo": {
+      "firstname": "John Updates",
+      "lastname": "Doe",
+      "dob": "1990/06/15"
+    },
+    "work": {
+      "companyname": "New Acme Inc",
+      "salary": 55000,
+      "currency": "USD"
+    },
+    "home": {
+      "country": "USA",
+      "city": "Chicago"
+    }
+  },
+  {
+    "email": "devrim@example.com",
+    "personalInfo": {
+      "firstname": "devrim",
+      "lastname": "Yilmaz",
+      "dob": "1970/06/15"
+    },
+    "work": {
+      "companyname": "Developer Inc",
+      "salary": 50000,
+      "currency": "USD"
+    },
+    "home": {
+      "country": "USA",
+      "city": "New York"
+    }
+  },
+  {
+    "email": "NEWUSER@example.com",
+    "personalInfo": {
+      "firstname": "savas",
+      "lastname": "Yilmaz",
+      "dob": "1970/06/15"
+    },
+    "work": {
+      "companyname": "Arton Inc",
+      "salary": 150000,
+      "currency": "USD"
+    },
+    "home": {
+      "country": "Norway",
+      "city": "Drammen"
+    }
+  }
+]

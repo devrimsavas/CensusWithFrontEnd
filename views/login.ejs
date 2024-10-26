@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<%- include('partials/header.ejs') %>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %>
+    
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="text-center">Login</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="/auth/login" method="POST"> <!-- Update the action to your login processing URL -->
+                            <div class="mb-3">
+                                <label for="login" class="form-label">Login</label>
+                                <input type="text" class="form-control" id="login" name="login" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100" id="login-button" name="login-button">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $('#login-button').on('click',function(e) {
+                e.preventDefault();
+
+                let login=$('#login').val();
+                let password=$('#password').val();
+                console.log(login, password);
+
+                fetch('/auth/login', {
+                    method: 'POST',
+                    headers:{'Content-Type': 'application/json'},
+                    body:JSON.stringify({login, password})
+                })
+                .then(response=> {
+                    if (!response.ok) {
+                        throw Error(response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data=> {
+                    alert(data.message);
+                    window.location.href = "/participants/index";
+                })
+                .catch(error=> {
+                    console.error('Error:', error);
+                });
+            })
+        })
+
+    </script>
+
+    
+</body>
+</html>

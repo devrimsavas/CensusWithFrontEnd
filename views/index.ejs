@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('partials/header.ejs') %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container-fluid mt-5"  name="index-main" id="index-main">
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+      <p> It was left blank to add authentication method for further development </p>
+      <!--a href="/participants/index">Go to Application</a><br-->
+      <a href="#" onclick="goToApplication()"> Proceed to Application</a>"<br>
+      <a href="/auth/login">Login</a>
+    </div>
+
+    <script>
+      //validate login credentials 
+
+      function goToApplication() {
+        // fetch 
+        fetch('/participants/index', {
+          method: 'GET',
+        })
+        .then(response=> {
+          if (response.ok) {
+            window.location.href='/participants/index';
+          } else {
+            response.json().then(data=> alert(data.message));
+          }
+        }) 
+        .catch(error=> console.error('Error:', error));
+      }
+    </script>
+  </body>
+</html>
+

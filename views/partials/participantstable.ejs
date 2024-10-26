@@ -1,0 +1,139 @@
+<div class="container-fluid mt-5" name="database-menu-holder" id="database-menu-holder">
+    <div class="row">
+
+
+        <!--Database entry form-->  
+        <!--Database entry form-->  
+        <div class="col-md-5 bordered rounded" name="database-form" id="database-form">
+            <p style="background-color: blanchedalmond;" id="register-operation"> <strong> ADD DELETE UPDATE ENTRY</strong></p><hr>
+            <div class="form-group" id="database-entry-form-group" name="database-entry-form-group">
+                
+                <form class="form border" action="/dynamodb/newentry" method="POST" name="database-entry" id="database-entry">
+                
+                <!-- Personal Information Section -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstname">First Name</label>
+                    <input type="text" class="form-control" id="firstname" name="personalInfo[firstname]" placeholder="Enter first name">
+
+                    <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="personalInfo[lastname]" placeholder="Enter last name">
+
+                    <label for="dob">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" name="personalInfo[dob]" placeholder="YYYY/MM/DD">
+                </fieldset>
+
+                <!-- Work Information Section -->
+                <fieldset>
+                    <legend>Work Information</legend>
+                    <label for="companyname">Company Name</label>
+                    <input type="text" class="form-control" id="companyname" name="work[companyname]" placeholder="Enter company name">
+
+                    <label for="salary">Salary</label>
+                    <input type="number" class="form-control" id="salary" name="work[salary]" placeholder="Enter salary">
+
+                    <label for="currency">Currency</label>
+                    <select id="currency" name="work[currency]" class="form-select">
+                        <option value="">Select currency</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                        <option value="GBP">GBP</option>
+                    </select>
+                    
+                </fieldset>
+
+                <!-- Home Information Section -->
+                <fieldset>
+                    <legend>Home Information</legend>
+                    <%- include('countries.ejs') %>
+
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" name="home[city]" placeholder="Enter city">
+                </fieldset>
+
+                <!-- Email Field -->
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+
+                <!-- Form Buttons -->
+                <button type="button" class="btn btn-primary mt-3" id="add-button" name="add-button">ADD</button>
+                
+                <button type="submit" class="btn btn-warning mt-3" id="update-button" name="update-button">UPDATE A USER</button>
+                </form>
+            </div> 
+        </div>
+
+        
+        
+        
+
+        <!--Database table--> 
+        <div class="col-md-7 border rounded" name="database-table" id="database-table-menu"> 
+            <p style="background-color: blanchedalmond;" > GET ALL DATA </p><hr>
+            <div class="button-group bg-light  ">
+                <div class="row">
+                    <div class="col-md-11">
+
+                
+                        <button type="button " class="btn btn-primary  " id="list-of-all" name="list-of-all"> ALL</button>
+                        <button type="button" class="btn btn-secondary " id="personal-details-of-all" name="personal-details-of-all">DETAILS OF ALL</button>
+                        <button type="button" class="btn btn-warning " id="a-person-details" name="a-person-details">PERSON DETAIL</button>
+                        <button type="button" class="btn btn-info " id="a-person-home-details" name="a-person-home-details">PERSON HOME</button>
+                        <button type="button" class="btn btn-dark " id="a-person-work-details" name="a-person-work-details">PERSON WORK</button>
+                        <button type="button" class="btn btn-danger " id="delete-button" name="delete-button">DELETE A USER</button>
+
+                    </div>
+                    <div class="col-md-1">
+
+                        
+
+
+                        
+                    </div>
+
+
+                </div>
+                
+
+            </div>
+            <!--hide this section -->
+            <div class="container-fluid mt-2" id="display" name="display" style="display: none;">
+                <textarea class="form-control" id="display-area" name="display-area" rows="5" cols="150"></textarea>
+
+            </div>
+
+            <div class="d-flex flex-row mt-2 mb-2 " id="display2" name="display2" >
+                <label for="email-input" class="form-label"> Person Email</label>
+                <select id="email-input" name="email-input" class="form-select" style="font-weight: bold;">
+                    <option value="" >Select email</option>
+                    <!--add people dynamically-->
+                </select>
+
+                <button class="btn btn-primary" type="button" id="send-to-form" name="send-to-form">Send to Form</button>
+
+            </div>
+
+            <!--TABLES CONTAINER-->
+            <div class="container-fluid mt-2" id="table-container" name="table-container">
+                
+                <div class="table-responsive">
+                    <!--dynamic tables will came here-->
+                    <table class="table table-striped table-hover table-bordered" id="user-table" name="user-table">
+                        <thead>
+                            <!--dynamic table headers will come here-->
+                        </thead>
+                        <tbody>
+                            <!--dynamic table rows will come here-->
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+
+
+    </div>
+<!--eND database- menu holder-->       
+</div>
+<script src="../javascripts/participants1.js"></script>

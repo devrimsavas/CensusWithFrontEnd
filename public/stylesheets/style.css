@@ -1,0 +1,159 @@
+body {
+  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  
+  padding-top:0px;
+  
+  
+}
+
+a {
+  color: #00B7FF;
+}
+
+
+#index-main {
+margin-top: 120px !important;
+padding-top:10px;
+text-align: center;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+width:50%;
+margin:auto;
+
+}
+
+#dynamo-main {
+
+  margin-top: 20px !important;
+  padding-top:10px;
+
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#database-entry {
+  border-radius:5px;
+  padding:5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #b4eaff !important;
+}
+
+/* when edit or delete mark the register form as selected*/
+.database-entry-selected {
+  background-color: #857810 !important;
+}
+
+#database-entry-form-group  {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #000000 !important;
+
+
+}
+
+
+
+
+#database-table tbody tr:hover td {
+  color: #000000 !important;
+  background-color: rgb(30, 237, 30);
+  font-weight:bold;
+  cursor: pointer;
+}
+
+.responsive-table {
+  overflow-y:auto;
+  max-height: 500px;
+}
+
+.selected {
+  background-color: rgb(15, 56, 15) !important;
+  color:rgb(254, 22, 22) !important;
+  font-weight: bolder !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#table-header tr th  {
+  background-color: #9a8817 !important;
+  color:rgb(5, 6, 2) !important;
+ 
+}
+
+
+#navbar {
+  background-color: #9a8817 !important;
+  color:#000000 !important;
+  font-weight:bold !important;
+}
+
+ #navbar.nav-item {
+  color:#000000 !important;
+}
+
+.nav-link ,#name-placeholder {
+  color:#000000 !important;
+  border-radius: 4px;
+  border-width:1px;
+  border-style:solid;
+  border-color:#000000;
+}
+
+.nav-link :hover {
+  background-color: #16042c !important;
+  color:rgb(63, 65, 60) !important;
+  font-weight:bolder !important;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#username-placeholder {
+  
+  font-size:20px;
+  font-weight:bold;
+  margin:right;
+  color:#cf0909 !important;
+  
+  
+  
+}
+
+#register-operation :hover {
+  background-color: #b4ef10 !important;
+  cursor:pointer;
+}
+
+.button-group .btn {
+  margin: 0 1px; /* Adjust spacing as needed */
+}
+
+ .btn {
+  width:100px !important;
+  height:60px !important;
+  margin: 0 1px; /* Adjust spacing as needed */
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  
+
+}
+
+.table #user-table tbody tr:hover {
+  background-color: #857810 !important;
+  color: #de0909 !important;
+  cursor:pointer;
+}
+
+#send-to-form {
+  width:220px !important;
+  height:50px !important;
+}
+
+.disable-button {
+  opacity:0.5;
+  pointer-events: none;
+  cursor:not-allowed;
+}
+
+
+
+
+
+
+
+
+

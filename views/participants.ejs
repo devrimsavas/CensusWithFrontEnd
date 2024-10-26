@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <%- include('partials/header.ejs') %>
+  </head>
+  <body>
+    <%- include('partials/navbar.ejs') %>
+    <div class="container-fluid mt-5 mb-2" >
+      <h1><%= title %></h1>
+      <p>Welcome to <%= title %></p>
+      
+      
+
+      <%-include('partials/participantstable.ejs')%>
+      
+    </div>
+  </body>
+</html>
+
